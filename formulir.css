@@ -1,0 +1,152 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url("bg.jpg");
+    background-position: 200px;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.input {
+    background-color: #fff1a9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #2c2800;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+.jk {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+input[type="date"] {
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+textarea {
+    background-color: #f9f9f9;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    font-weight: 550;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    background-color: #fbffe4;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+button::before,
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+button::before {
+    left: -10px;
+    background: #462900;
+}
+
+button::after {
+    right: -10px;
+    background: #9a8218;
+}
+
+button:hover::before,
+button:hover::after {
+    width: 58%;
+}
+
+button:hover span {
+    color: #9dffa9;
+    transition: 0.3s;
+}
+
+button span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+}
+
+input[type="date"].placeholder::before {
+    content: "Masukkan Tanggal Lahir Mahasiswa";
+    color: #aaa;
+}
